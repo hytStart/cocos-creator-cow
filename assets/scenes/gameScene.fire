@@ -1125,10 +1125,10 @@
         "__uuid__": "4c4b7396-ebf6-45b1-b1c3-007f9b167076"
       },
       {
-        "__uuid__": "4c4b7396-ebf6-45b1-b1c3-007f9b167076"
+        "__uuid__": "e7215e27-8d7f-405d-b548-7ff2d497c584"
       },
       {
-        "__uuid__": "4c4b7396-ebf6-45b1-b1c3-007f9b167076"
+        "__uuid__": "48c6e76e-94ce-44b5-8282-d6f219c55b3b"
       }
     ],
     "_id": "44ebC/PUhHBJI95JXgYwz4"
@@ -1332,7 +1332,7 @@
         "__id__": 35
       }
     ],
-    "_active": false,
+    "_active": true,
     "_level": 2,
     "_components": [],
     "_prefab": null,
