@@ -19,26 +19,35 @@ cc.Class({
 
     onLoad () {
         //随机生成牛
-        this.animCow = this.node.addComponent('frame_anim')
         this.cowType = Math.floor(Math.random() * 3)
         // 以及 牛的背景更换
-        this.cowPlay()
+        this.cowShow = this.node.getComponent(cc.Sprite)
 
         // 初始化速度
         this.cowSpeed = -(Math.random() * 300 + 200)
+
+        this.gameScene = cc.find('Canvas').getComponent('gameScene')
     },
 
-    cowPlay() {
-        this.gameScene = cc.find('Canvas').getComponent('gameScene')
-
+    cowPlay(dt) {
         // 牛的背景更换
-        this.animCow.sprite_frames = this.cowSkinType[this.cowType].cowAnimate
-        this.animCow.duration = 0.2
-        this.animCow.play_loop()
+        this.playTime += dt
+
+        let index = Math.floor(this.playTime / this.duration) // 向下取整数
+
+        if (index >= this.cowAniArray.length) {
+            index = 0
+            this.playTime -= (this.duration * this.cowAniArray.length) // 接着上面的时间结算
+        }
+        
+        //  在合法的范围之内
+        this.cowShow.spriteFrame = this.cowAniArray[index]
     },
 
     start () {
-
+        this.duration = 0.2
+        this.playTime = 0
+        this.cowAniArray = this.cowSkinType[this.cowType].cowAnimate
     },
 
     update (dt) {
@@ -49,7 +58,9 @@ cc.Class({
             // 将当前的cow移除cowGet
             this.removeFromCowGet(this.node)
             this.node.removeFromParent()
+            return
         }
+        this.cowPlay(dt)
     },
 
     removeFromCowGet(cow) {
