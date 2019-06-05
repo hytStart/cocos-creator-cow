@@ -121,7 +121,6 @@ cc.Class({
                 cc.loader.loadRes('mou', cc.AudioClip, function (err, clip) {
                     cc.audioEngine.play(clip);
                 });
-                // cc.audioEngine.play(cc.url.raw('/resources/audio/mou.mp3'))
 
                 return cowType
             }
