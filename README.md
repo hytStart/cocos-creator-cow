@@ -1,7 +1,7 @@
 # cocos-creator-cow
 用cocos creator做的套牛小游戏
 
-预览地址： [sulands-cow](https://hytstart.github.io/cow/)，请选择移动端观看。
+预览地址： [sulands-cow](https://hytstart.github.io/game/cow/)，请选择移动端观看。
 
 分享内容预览
 - 小游戏体验。
@@ -13,9 +13,9 @@
 - 构建，发布。（h5, 微信小游戏）
 
 小游戏体验:  
-- web 星星：https://hytstart.github.io/star/  
-- h5  小羊：https://hytstart.github.io/sheep/  
-- h5  小鸟：https://hytstart.github.io/bird/  
+- web 星星：https://hytstart.github.io/game/star/  
+- h5  小羊：https://hytstart.github.io/game/sheep/  
+- h5  小鸟：https://hytstart.github.io/game/bird/  
 ---
 
 
